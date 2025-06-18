@@ -1,4 +1,4 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { properties } from "../../mocks";
 import Hero from "../components/Hero";
 import PropertyCard from "../components/PropertyCard";
@@ -44,13 +44,19 @@ export const Home = () => {
     <>
       <Hero />
       <Container>
-        <Stack sx={{ my: 5 }} direction="row" spacing={2}>
-          <BasicSelect label="Colonias" items={colonias} />
-          <BasicSelect label="Interes" items={modo} />
-          <BasicSelect label="Tipo" items={tipo} />
-          <BasicSelect label="Recamaras" items={recamaras} />
-          <BasicSelect label="Baños" items={bathroom} />
-        </Stack>
+        <Box sx={{ width: "100%", overflowX: "auto" }}>
+          <Stack
+            sx={{ my: 5, width: "max-content" }}
+            direction="row"
+            spacing={2}
+          >
+            <BasicSelect label="Colonias" items={colonias} />
+            <BasicSelect label="Interes" items={modo} />
+            <BasicSelect label="Tipo" items={tipo} />
+            <BasicSelect label="Recamaras" items={recamaras} />
+            <BasicSelect label="Baños" items={bathroom} />
+          </Stack>
+        </Box>
         <Typography sx={{ mt: 5 }} variant="h5" gutterBottom>
           Listados de inmuebles que te pueden interesar
         </Typography>
