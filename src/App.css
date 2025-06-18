@@ -1,0 +1,4 @@
+.image-box:nth-of-type(3n + 2),
+.image-box:nth-of-type(3n + 3) {
+  height: 225px; /* la mitad de 450px */
+}
